@@ -108,7 +108,7 @@ export default function DetailPage() {
                     if(result.status == 200) {
                         document.querySelector("#commentArea").value = "";
                         setComments([...comments, result.data])
-                        toast.success("Yorumunuz eklendi!", {
+                        toast.success("Your comment has been added!", {
                             theme: "light",
                             position: "top-center"
                         });
@@ -116,13 +116,13 @@ export default function DetailPage() {
                 })
 
             } else {
-                toast.warning("Yorumunuz boş olamaz!", {
+                toast.warning("Your comment cannot be empty!", {
                     theme: "light",
                     position: "top-center"
                 });
             }
         } else {
-            toast.error("Yorum yapmak için lütfen giriş yapın!", {
+            toast.error("Please log in to comment", {
                 theme: "light",
                 position: "top-center"
             });
@@ -175,12 +175,12 @@ export default function DetailPage() {
                                         document.querySelector("#commentSection").scrollIntoView({
                                             behavior: "smooth"
                                         })
-                                    }}><strong>Yorum Yap</strong></button>
+                                    }}><strong>Leave a comment</strong></button>
 
                             </div>
                             <div className='col-sm-4'>
                                 <button class="detail-page-btn btn btn-light btn-lg col-12" type="button"
-                                    data-bs-toggle="modal" data-bs-target="#movieTrailerModal"><strong>Fragman</strong></button>
+                                    data-bs-toggle="modal" data-bs-target="#movieTrailerModal"><strong>Trailer</strong></button>
 
                             </div>
                         </div>
@@ -322,7 +322,7 @@ export default function DetailPage() {
 
                     </div>
                     <div className='col-sm-12 col-md-6 text-start'>
-                        <h3>Yorum Yap</h3>
+                        <h3>Leave a comment</h3>
                             <textarea id="commentArea" className='text-dark mb-3' placeholder='Yorumunuz' onChange={(e) => setCommentText(e.target.value)} ></textarea>
                             <button class="comment-btn btn btn-dark btn-lg col-12" type="button" onClick={() => sendCommentText()}><strong>Gönder</strong></button>
                     </div>
@@ -333,7 +333,7 @@ export default function DetailPage() {
         {/* Other Movies */}
         <section className='p-5'>
             
-            <h3 className='text-center mb-4'>Vizyondaki Diğer Filmler</h3>
+            <h3 className='text-center mb-4'>Other Movies in Theaters</h3>
             <Swiper
                 slidesPerView={5}
                 spaceBetween={0}
@@ -361,7 +361,7 @@ export default function DetailPage() {
                                                 navigate("/movie/" + movie.movieId)
                                                 getNewVisionMovie(movie.movieId);
                                             }}>
-                                            <strong>Yorum Yap </strong>
+                                            <strong>Leave a comment </strong>
                                         </a>
                                         <a class="slider-button btn btn-light btn-md rounded d-none d-sm-block"
                                             onClick={()=> {
@@ -389,7 +389,7 @@ export default function DetailPage() {
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="movieTrailerLabel">Fragman</h5>
+                    <h5 class="modal-title" id="movieTrailerLabel">Trailer</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => {
                         let player = document.getElementById("videoPlayer").getAttribute("src");
                         document.getElementById("videoPlayer").setAttribute("src", player);

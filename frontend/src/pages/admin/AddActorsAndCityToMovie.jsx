@@ -57,11 +57,11 @@ export default function AddActorsAndCityToMovie() {
   return (
     <div>
         <div className='mt-5 p-5 container' style={{height: "100vh"}}>
-            <h2 className='mt-4'>Film Ekle</h2>
+            <h2 className='mt-4'>Add Movie</h2>
             <hr />
 
             <h5 className='my-4'>
-                Eklemiş olduğunuz filmin oyuncu ve şehir bilgilerini ekleyin.
+            Add the actor and city information of the movie you added.
             </h5>
 
             <Formik 
@@ -114,15 +114,15 @@ export default function AddActorsAndCityToMovie() {
                             ))}
                         />
                     </div>
-                    <p>Listede yoksa lütfen virgül ile ayırarak yazınız.</p>
+                    <p>If it is not in the list, please write it, separated by a comma.</p>
                     <div class="form-floating mb-3">
-                        <KaanKaplanTextInput  type="text" name='actorName' class="form-control" id="floatingInput" placeholder="Aktörün İsmi" />
-                        <label for="floatingInput">Aktörün İsmi</label>
+                        <KaanKaplanTextInput  type="text" name='actorName' class="form-control" id="floatingInput" placeholder="Actor's Name" />
+                        <label for="floatingInput">Actor's Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <KaanKaplanTextInput name='imageUrl' type="text" class="form-control" id="imageUrl" placeholder="Afiş Resmi Url" />
-                        <label for="imageUrl">Afiş Resmi Url</label>
+                        <KaanKaplanTextInput name='imageUrl' type="text" class="form-control" id="imageUrl" placeholder="Banner Image Url" />
+                        <label for="imageUrl">Banner Image Url</label>
                     </div>
 
                      <div class="mb-3">
@@ -134,7 +134,7 @@ export default function AddActorsAndCityToMovie() {
                             options= {cities.map(city => (
                                 {key: city, text:city, value: city}
                             ))}
-                            placeholder="Şehir"
+                            placeholder="City"
                         />
                     </div>
 
