@@ -323,8 +323,10 @@ export default function DetailPage() {
                     </div>
                     <div className='col-sm-12 col-md-6 text-start'>
                         <h3>Leave a comment</h3>
-                            <textarea id="commentArea" className='text-dark mb-3' placeholder='Yorumunuz' onChange={(e) => setCommentText(e.target.value)} ></textarea>
-                            <button class="comment-btn btn btn-dark btn-lg col-12" type="button" onClick={() => sendCommentText()}><strong>Gönder</strong></button>
+                            <textarea id="commentArea" className='text-dark mb-3' placeholder='Your comment' onChange={(e) => setCommentText(e.target.value)} ></textarea>
+                            <button class="comment-btn btn btn-dark btn-lg col-12" type="button" onClick={() => sendCommentText()}><strong>Send
+
+</strong></button>
                     </div>
                 </div>
             </div>

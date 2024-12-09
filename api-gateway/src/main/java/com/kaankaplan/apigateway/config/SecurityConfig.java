@@ -12,7 +12,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity serverHttpSecurity){
-
+        
         serverHttpSecurity.cors().and().csrf().disable()
                 .authorizeExchange(exchange -> exchange
                         .anyExchange()

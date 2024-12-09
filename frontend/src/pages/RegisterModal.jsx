@@ -43,7 +43,7 @@ export default function RegisterModal() {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                 <div class="modal-header login-modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Üye Ol</h5>
+                    <h5 class="modal-title" id="registerModalLabel">Sign Up</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <Formik 
@@ -67,7 +67,7 @@ export default function RegisterModal() {
                             </div>
                             <div className="form-floating mb-3">
                                 <KaanKaplanTextInput type="password" name="password" className="form-control" id="password" placeholder='Password' required/>
-                                <label for="Password">Şifre</label>
+                                <label for="Password">Password</label>
                             </div>
                             <div className="form-floating mb-3">
                                 <KaanKaplanTextInput type="password" name="passwordAgain" className="form-control" id="passwordAgain" placeholder='Password Again' required/>
